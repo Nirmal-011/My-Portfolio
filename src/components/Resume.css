@@ -1,0 +1,42 @@
+body {
+    background: linear-gradient(to bottom right, #e6f0ff, #d1e3ff, #c2daff);
+    min-height: 100vh;
+    margin: 0;
+  }
+.resume-container {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom right, #e6f0ff, #d1e3ff, #c2daff);
+    color: rgb(94, 147, 239);
+    min-height: 100vh;
+    font-weight: 500;
+  }
+  
+  .resume-container h2 {
+    font-size: 2.5rem;
+    color: #2563eb;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .btn:hover {
+    background-color: #d98a0e;
+  }
+  
+  .resume-preview {
+    margin-top: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  

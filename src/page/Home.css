@@ -1,0 +1,166 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .home-content {
+    text-align: center;
+    max-width: 700px;
+    padding: 2rem;
+    z-index: 2;
+    position: relative;
+  }
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #5c4d8c;
+  }
+  
+  
+  h1 {
+    font-size: 3.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .name-highlight {
+    color: #4a90e2;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  .social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 25px;
+    gap: 10px;
+  }
+  .social-icons a{
+    border: 3px solid rgb(4, 4, 118);
+    padding: 10px 50px;
+    border-radius: 10px;
+  }
+  
+  .social-icons a img {
+    width: 55px;
+    height: auto;
+  }
+  .social-icons a:hover {
+    background-color: rgb(159, 159, 222);  /* Change background on hover */
+    transform: scale(1.1);  /* Slight zoom effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+   
+  }
+  
+  .social-icons a:hover img {
+    
+    filter: brightness(1) invert(0); /* Make icon white */
+  }
+  
+  .btn {
+    position: relative;
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #4a90e2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite alternate;
+  }
+  
+  /* Pulse Animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  /* Hover Effect */
+  .btn:hover {
+    background-color: #357abd;
+    animation-play-state: paused;
+  }
+  
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      120deg, 
+      transparent, 
+      rgba(255,255,255,0.3), 
+      transparent
+    );
+    transition: all 0.6s;
+  }
+  
+  .btn:hover::before {
+    left: 100%;
+  }
+  
+  /* Abstract Background Effect */
+  .home-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: rgba(74, 144, 226, 0.05);
+    transform: rotate(-45deg);
+    z-index: 1;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .home-container{
+      padding-top: 100px;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    .subtitle {
+      font-size: 1rem;
+    }
+  
+    .btn {
+      padding: 10px 20px;
+    }
+  }
