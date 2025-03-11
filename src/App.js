@@ -8,6 +8,7 @@ import About from "./page/About";
 import Achievements from "./page/Achievements";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
+import Project from "./components/Project";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/achievements" element={<Achievements/>}/>
         <Route path="/resume" element={<Resume/>}/>
         <Route path="/contact" element={<Contact/>} />
+        <Route path="/projects" element={<Project/>}/>
       </Routes>
     </Router>
   );

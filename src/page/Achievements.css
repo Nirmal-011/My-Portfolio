@@ -7,13 +7,13 @@ body {
   }
   
   .achievements-container {
-    max-width: 900px;
-    margin: 50px auto 0 auto;
+    width: 95%;
+    margin:  0 auto;
     padding: 2rem;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     color: #333;
     background-color: #ffffff;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     box-shadow: 0 10px 25px rgba(37, 99, 235, 0.15), 0 5px 10px rgba(0, 0, 0, 0.05);
   }
   
@@ -115,7 +115,8 @@ body {
     
     .achievements-container {
       padding: 1.5rem;
-      margin-top: 150px; /* Add space below the navbar */
+      width: 280px;
+      /* margin-top: 200px; Add space below the navbar */
     }
     
     body {

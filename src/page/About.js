@@ -35,7 +35,7 @@ const About = () => {
               <span className="timeline-tag work">Work</span>
               <span className="timeline-date">2025 - Present</span>
             </div>
-            <h3 className="timeline-title-item">Junior Java Developer</h3>
+            <h3 className="timeline-title-item">Java Developer Associate </h3>
             <h4 className="timeline-subtitle">VSoft Solutions.</h4>
             <p className="timeline-description">Working on Java, React Native, and Firebase to build scalable applications.</p>
           </div>
