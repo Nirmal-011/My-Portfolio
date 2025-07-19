@@ -37,12 +37,19 @@ const workplaceProjects = [
     github: null, // No GitHub link available
     detailsAvailable: true
   },
+  // {
+  //   name: "Driving License App",
+  //   description: "A real-time project for applying for a license and finding nearby driving schools.",
+  //   techStack: ["React Native", "Firebase"],
+  //   github: null, // No GitHub link available
+  //   detailsAvailable: true
+  // },
   {
-    name: "Driving License App",
-    description: "A real-time project for applying for a license and finding nearby driving schools.",
-    techStack: ["React Native", "Firebase"],
-    github: null, // No GitHub link available
-    detailsAvailable: true
+    name: "Durga Traders",
+    description: "An E-commerce website to order water filter and an admin section where they can handle order management",
+    techStack:["REact.js", "Firebase" ],
+    github:null,
+    detailsAvailable:true
   }
 ];
 

@@ -48,7 +48,7 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <h2 className="contact-title">Contact Me</h2>
-      <p className="contact-subtitle">Send me a message, and I'll get back to you soon.</p>
+      <p className="contact-subtitle">Send me a message.</p>
 
       {successMessage && <div className="alert success-alert">{successMessage}</div>}
       {errorMessage && <div className="alert error-alert">{errorMessage}</div>}

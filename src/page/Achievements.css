@@ -1,140 +1,261 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+}
+
 /* Page background styling */
 body {
     background: linear-gradient(to bottom right, #e6f0ff, #d1e3ff, #c2daff);
     min-height: 100vh;
-    padding: 2rem;
+    padding: 1rem;
     margin: 0;
-  }
-  
-  .achievements-container {
-    width: 95%;
-    margin:  0 auto;
-    padding: 2rem;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.achievements-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
     color: #333;
     background-color: #ffffff;
-    /* border-radius: 8px; */
+    border-radius: 8px;
     box-shadow: 0 10px 25px rgba(37, 99, 235, 0.15), 0 5px 10px rgba(0, 0, 0, 0.05);
-  }
-  
-  h2 {
-    font-size: 1.75rem;
+}
+
+h2 {
+    font-size: 1.5rem;
     font-weight: 600;
     color: #2563eb;
     margin-top: 2rem;
     margin-bottom: 1.25rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #e5e7eb;
-  }
-  
-  .achievements-container h2:first-child {
+    text-align: center;
+}
+
+.achievements-container h2:first-child {
     margin-top: 0;
-  }
-  
-  .achievements-list {
+}
+
+.achievements-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     margin-bottom: 2rem;
-  }
-  
-  .achievement-card {
+}
+
+.achievement-card {
     background-color: #f9fafb;
     border-radius: 6px;
-    padding: 1.5rem;
+    padding: 1.25rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     border-left: 4px solid #2563eb;
-  }
-  
-  .achievement-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1);
-  }
-  
-  .achievement-card h3 {
-    font-size: 1.25rem;
+}
+
+.achievement-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 12px -3px rgba(37, 99, 235, 0.1);
+}
+
+.achievement-card h3 {
+    font-size: 1.125rem;
     font-weight: 600;
     margin: 0 0 0.75rem 0;
     color: #1e40af;
-  }
-  
-  .achievement-card p {
+}
+
+.achievement-card p {
     margin: 0.5rem 0;
     color: #4b5563;
-  }
-  
-  .achievement-card .description {
+    font-size: 0.95rem;
+}
+
+.achievement-card .description {
     margin-top: 0.75rem;
     line-height: 1.5;
-  }
-  
-  .goals-list, .milestones-list {
-    padding-left: 1.25rem;
+}
+
+.goals-list, .milestones-list {
+    padding-left: 0;
     margin-bottom: 2rem;
     list-style-type: none;
-  }
-  
-  .goals-list li, .milestones-list li {
+}
+
+.goals-list li, .milestones-list li {
     margin-bottom: 0.75rem;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
     background-color: #f9fafb;
     border-radius: 6px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     position: relative;
     transition: transform 0.2s ease;
-  }
-  
-  .goals-list li:hover, .milestones-list li:hover {
+    list-style: none;
+}
+
+.goals-list li:hover, .milestones-list li:hover {
     transform: translateX(5px);
-  }
-  
-  .goals-list li::before, .milestones-list li::before {
+}
+
+.goals-list li::before, .milestones-list li::before {
     content: '';
     position: absolute;
-    left: -1.25rem;
+    left: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    width: 1rem;
-    height: 1rem;
+    width: 0.75rem;
+    height: 0.75rem;
     border-radius: 50%;
-  }
-  
-  .goals-list li::before {
+}
+
+.goals-list li::before {
     background-color: #3b82f6;
-  }
-  
-  .milestones-list li::before {
+}
+
+.milestones-list li::before {
     background-color: #10b981;
-  }
-  
-  @media (max-width: 768px) {
-    .achievements-list {
-      grid-template-columns: 1fr;
-    }
-    
-    .achievements-container {
-      padding: 1.5rem;
-      width: 280px;
-      /* margin-top: 200px; Add space below the navbar */
-    }
-    
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
     body {
-      padding: 1rem;
+        padding: 2rem;
     }
-    
+
+    .achievements-container {
+        padding: 2rem;
+    }
+
+    .achievements-list {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .achievement-card {
+        padding: 1.5rem;
+    }
+
+    .achievement-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .achievement-card p {
+        font-size: 1rem;
+    }
+
     h2 {
-      position: relative;
-      z-index: 1;
-      text-align: center;
+        font-size: 1.75rem;
+        text-align: left;
     }
-    
-    /* Fix the double bullet points by ensuring only custom markers show */
-    .goals-list, .milestones-list {
-      list-style-type: none;
+
+    .goals-list li::before, .milestones-list li::before {
+        width: 1rem;
+        height: 1rem;
     }
-    
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    .achievements-list {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+
+    .achievement-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1);
+    }
+
+    .goals-list li:hover, .milestones-list li:hover {
+        transform: translateX(8px);
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    .achievements-container {
+        padding: 1rem;
+        border-radius: 4px;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .achievement-card {
+        padding: 1rem;
+    }
+
+    .achievement-card h3 {
+        font-size: 1rem;
+    }
+
+    .achievement-card p {
+        font-size: 0.9rem;
+    }
+
     .goals-list li, .milestones-list li {
-      list-style-type: none;
+        padding: 0.5rem 0.75rem 0.5rem 2rem;
+        font-size: 0.9rem;
     }
-  }
+
+    .goals-list li::before, .milestones-list li::before {
+        width: 0.6rem;
+        height: 0.6rem;
+        left: 0.75rem;
+    }
+}
+
+/* Additional responsive utilities */
+@media (max-width: 360px) {
+    .achievements-container {
+        padding: 0.75rem;
+    }
+
+    h2 {
+        font-size: 1.125rem;
+    }
+
+    .achievement-card h3 {
+        font-size: 0.95rem;
+    }
+
+    .achievement-card p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Landscape phone orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+    .achievements-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .achievements-container {
+        box-shadow: none;
+        padding: 1rem;
+    }
+
+    .achievement-card:hover {
+        transform: none;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .goals-list li:hover, .milestones-list li:hover {
+        transform: none;
+    }
+}   
